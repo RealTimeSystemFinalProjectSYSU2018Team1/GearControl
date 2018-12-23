@@ -7,11 +7,27 @@ int ErrStat;
 
 int UseCase;
 
-chan FromGear, ToGear;</declaration>
+int SysTimer;
+
+int FromGear, ToGear;
+
+// Channel for Interface.
+chan ReqNewGear, NewGear;
+
+// Channel for Engine.
+chan ReqSpeed, ReqTorque, ReqZeroTorque;
+chan TorqueZero, SpeedSet;
+
+// Channel for Clutch.
+chan OpenClutch, CloseClutch;
+chan ClutchIsOpen, ClutchIsClosed;
+
+// Channel for GearBox.
+chan ReqSet, GearSet;
+chan ReqNeu, GearNeu;
+</declaration>
 	<template>
 		<name>Interface</name>
-		<declaration>chan ReqNewGear, NewGear;
-</declaration>
 		<location id="id0" x="-204" y="612">
 			<name x="-214" y="578">Gear5</name>
 		</location>
@@ -406,7 +422,6 @@ clock GCTimer;
 			<target ref="id36"/>
 			<label kind="guard" x="664" y="578">GCTimer&gt;150
 &amp;&amp;GCTimer&lt;=200</label>
-			<label kind="assignment" x="782" y="493">v4=0</label>
 		</transition>
 		<transition>
 			<source ref="id31"/>
@@ -439,7 +454,6 @@ clock GCTimer;
 			<target ref="id20"/>
 			<label kind="guard" x="493" y="1207">GCTimer&gt;300
 &amp;&amp;GCTimer&lt;=350</label>
-			<label kind="assignment" x="544" y="1173">v5=0</label>
 		</transition>
 		<transition>
 			<source ref="id30"/>
@@ -537,9 +551,7 @@ clock GCTimer;
 	<template>
 		<name>Engine</name>
 		<declaration>clock ETimer;
-
-chan ReqSpeed, ReqTorque, ReqZeroTorque;
-chan TorqueZero, SpeedSet;</declaration>
+</declaration>
 		<location id="id44" x="-64" y="368">
 			<name x="-74" y="338">ErrorSpeed</name>
 		</location>
@@ -661,9 +673,6 @@ UseCase:=0</label>
 	<template>
 		<name>Clutch</name>
 		<declaration>clock CTimer;
-
-chan OpenClutch, CloseClutch;
-chan ClutchIsOpen, ClutchIsClosed;
 </declaration>
 		<location id="id53" x="-224" y="-16">
 			<name x="-234" y="-46">ErrorOpen</name>
@@ -727,8 +736,7 @@ chan ClutchIsOpen, ClutchIsClosed;
 		<name>GearBox</name>
 		<declaration>clock GBTimer;
 
-chan ReqSet, GearSet;
-chan ReqNeu, GearNeu;</declaration>
+</declaration>
 		<location id="id59" x="-400" y="32">
 			<name x="-410" y="2">ErrorIdle</name>
 		</location>
