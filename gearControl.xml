@@ -3,13 +3,13 @@
 <nta>
 	<declaration>// Place global declarations here.
 
-int ErrStat;
+int[0,4] ErrStat;
 
-int UseCase;
+int[0,2] UseCase;
 
 int SysTimer;
 
-int FromGear, ToGear;
+int[0,6] FromGear, ToGear;
 
 // Channel for Interface.
 chan ReqNewGear, NewGear;
