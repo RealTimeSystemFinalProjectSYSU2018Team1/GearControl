@@ -801,5 +801,29 @@ UseCase:=0</label>
 system Interface, GearControl, Engine, Clutch, GearBox;
 </system>
 	<queries>
+		<query>
+			<formula>A[] (GearControl.GNeuError imply GearBox.ErrorNeu)
+			</formula>
+			<comment>10
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (GearControl.GSetError imply GearBox.ErrorIdle)
+			</formula>
+			<comment>9
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (GearControl.COpenError imply Clutch.ErrorOpen)
+			</formula>
+			<comment>8
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (GearControl.CCloseError imply Clutch.ErrorClose)
+			</formula>
+			<comment>7
+			</comment>
+		</query>
 	</queries>
 </nta>
