@@ -1,6 +1,16 @@
 //This file was generated from (Commercial) UPPAAL 4.0.14 (rev. 5615), May 2014
 
 /*
+deadlock check
+*/
+A[] (ErrStat == 0 and UseCase == 0) imply not deadlock
+
+/*
+deadlock check
+*/
+A[] (ErrStat == 0 imply not deadlock)
+
+/*
 deadlock property
 */
 A[] (not deadlock)
