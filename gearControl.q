@@ -6,6 +6,21 @@ deadlock property
 A[] (not deadlock)
 
 /*
+Property 16
+*/
+A[] (v2 imply c2 <= 899)
+
+/*
+Property 15
+*/
+A[] (v2 imply c2 < 900)
+
+/*
+Property 2
+*/
+A[] (v2 imply c2 <= 1000)
+
+/*
 Property 1
 */
 A[] (v1 imply c1 <= 1500)
