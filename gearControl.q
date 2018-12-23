@@ -1,9 +1,44 @@
 //This file was generated from (Commercial) UPPAAL 4.0.14 (rev. 5615), May 2014
 
 /*
-
+deadlock property
 */
-//NO_QUERY
+A[] (not deadlock)
+
+/*
+counter example of Property 14
+*/
+A[] ((GearControl.Gear and Interface.GearN) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.Gear5) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.Gear4) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.Gear3) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.Gear2) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.Gear1) imply Engine.Torque)
+
+/*
+Property 14
+*/
+A[] ((GearControl.Gear and Interface.GearR) imply Engine.Torque)
 
 /*
 Property 13
