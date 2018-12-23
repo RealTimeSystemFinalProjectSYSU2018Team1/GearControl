@@ -10,6 +10,8 @@ int UseCase;
 chan FromGear, ToGear;</declaration>
 	<template>
 		<name>Interface</name>
+		<declaration>chan ReqNewGear, NewGear;
+</declaration>
 		<location id="id0" x="-204" y="612">
 			<name x="-214" y="578">Gear5</name>
 		</location>
