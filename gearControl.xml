@@ -3,7 +3,11 @@
 <nta>
 	<declaration>// Place global declarations here.
 
-int ErrStat;</declaration>
+int ErrStat;
+
+int UseCase;
+
+chan FromGear, ToGear;</declaration>
 	<template>
 		<name>Interface</name>
 		<location id="id0" x="-204" y="612">
@@ -530,7 +534,10 @@ clock GCTimer;
 	</template>
 	<template>
 		<name>Engine</name>
-		<declaration>clock ETimer;</declaration>
+		<declaration>clock ETimer;
+
+chan ReqSpeed, ReqTorque, ReqZeroTorque;
+chan TorqueZero, SpeedSet;</declaration>
 		<location id="id44" x="-64" y="368">
 			<name x="-74" y="338">ErrorSpeed</name>
 		</location>
@@ -645,13 +652,17 @@ clock GCTimer;
 			<source ref="id51"/>
 			<target ref="id48"/>
 			<label kind="synchronisation" x="4" y="-247">ReqZeroTorque?</label>
-			<label kind="assignment" x="4" y="-232">ETimer:=0
-,UseCase:=0</label>
+			<label kind="assignment" x="4" y="-232">ETimer:=0,
+UseCase:=0</label>
 		</transition>
 	</template>
 	<template>
 		<name>Clutch</name>
-		<declaration>clock CTimer;</declaration>
+		<declaration>clock CTimer;
+
+chan OpenClutch, CloseClutch;
+chan ClutchIsOpen, ClutchIsClosed;
+</declaration>
 		<location id="id53" x="-224" y="-16">
 			<name x="-234" y="-46">ErrorOpen</name>
 		</location>
