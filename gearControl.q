@@ -3,24 +3,69 @@
 /*
 
 */
+//NO_QUERY
+
+/*
+Property 13
+*/
+E<> (Interface.GearN)
+
+/*
+Property 13
+*/
+E<> (Interface.Gear5)
+
+/*
+Property 13
+*/
+E<> (Interface.Gear4)
+
+/*
+Property 13
+*/
+E<> (Interface.Gear3)
+
+/*
+Property 13
+*/
+E<> (Interface.Gear2)
+
+/*
+Property 13
+*/
+E<> (Interface.Gear1)
+
+/*
+Property 13
+*/
+E<> (Interface.GearR)
+
+/*
+Property 12
+*/
+A[] (Engine.Torque imply Clutch.Closed)
+
+/*
+Property 11
+*/
 A[] (Engine.ErrorSpeed imply ErrStat != 0)
 
 /*
-10
+Property 10
 */
 A[] (GearControl.GNeuError imply GearBox.ErrorNeu)
 
 /*
-9
+Property 9
 */
 A[] (GearControl.GSetError imply GearBox.ErrorIdle)
 
 /*
-8
+Property 8
 */
 A[] (GearControl.COpenError imply Clutch.ErrorOpen)
 
 /*
-7
+Property 7
 */
 A[] (GearControl.CCloseError imply Clutch.ErrorClose)
