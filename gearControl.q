@@ -6,6 +6,26 @@ deadlock property
 A[] (not deadlock)
 
 /*
+Property 6
+*/
+A[] (v6 imply c6 <= 200)
+
+/*
+Property 5
+*/
+A[] (v5 imply c5 <= 350)
+
+/*
+Property 4
+*/
+A[] (v4 imply c4 <= 200)
+
+/*
+Property 3
+*/
+A[] (v3 imply c3 <= 200)
+
+/*
 counter example of Property 14
 */
 A[] ((GearControl.Gear and Interface.GearN) imply Engine.Torque)
