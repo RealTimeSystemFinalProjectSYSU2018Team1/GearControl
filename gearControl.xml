@@ -2,7 +2,8 @@
 <!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
 <nta>
 	<declaration>// Place global declarations here.
-</declaration>
+
+int ErrStat;</declaration>
 	<template>
 		<name>Interface</name>
 		<location id="id0" x="-204" y="612">
@@ -711,7 +712,10 @@ clock GCTimer;
 	</template>
 	<template>
 		<name>GearBox</name>
-		<declaration>clock GBTimer;</declaration>
+		<declaration>clock GBTimer;
+
+chan ReqSet, GearSet;
+chan ReqNeu, GearNeu;</declaration>
 		<location id="id59" x="-400" y="32">
 			<name x="-410" y="2">ErrorIdle</name>
 		</location>
@@ -773,8 +777,8 @@ clock GCTimer;
 	<system>// Place template instantiations here.
 
 // List one or more processes to be composed into a system.
-system Interface,GearControl,Engine,Clutch,GearBox;
-    </system>
+system Interface, GearControl, Engine, Clutch, GearBox;
+</system>
 	<queries>
 	</queries>
 </nta>
